@@ -45,6 +45,8 @@ func Run() int {
 }
 
 func init() {
+	rootCmd.SetOut(os.Stdout)
+	rootCmd.SetErr(os.Stderr)
 	rootCmd.AddCommand(project.SubCmd)
 	rootCmd.AddCommand(document.SubCmd)
 	rootCmd.AddCommand(context.SubCmd)
